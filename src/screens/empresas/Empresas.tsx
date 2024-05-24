@@ -6,9 +6,6 @@ import { Button, Form, Modal } from "react-bootstrap";
 import BtnEdit from "../../componentes/btnEdit/BtnEdit";
 import BtnDelete from "../../componentes/btnDelete/BtnDelete";
 import CargarImagen from "../../componentes/cargarImagenes/CargarImagen";
-import CIcon from "@coreui/icons-react";
-import { cibAddthis } from "@coreui/icons";
-
 
 export default function Empresas() {
     const [empresas, setEmpresas] = useState<Empresa[]>([]);

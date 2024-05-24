@@ -17,7 +17,6 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { useParams } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 import CboBoxFiltrar from '../../componentes/cboBoxFiltrar/CboBoxFiltrar';
 
@@ -25,7 +24,6 @@ const Facturacion = () => {
     const [pedidos, setPedidos] = useState<Pedido[]>([]);
     const [busqueda, setBusqueda] = useState('');
     const { setNombreApartado } = useAtributos();
-    const { idsucursal } = useParams();
 
     const urlapi = import.meta.env.VITE_API_URL;
     const pedidoService = new PedidoService(urlapi + "/pedidos");

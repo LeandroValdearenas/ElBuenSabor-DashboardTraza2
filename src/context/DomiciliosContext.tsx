@@ -31,7 +31,7 @@ export function DomiciliosContextProvider({ children }: { children: ReactNode })
 
     const modalDomicilios =
         <ModalGenerico titulo="domicilios" tituloModal="Domicilios" ref={modalRefDomicilios}>
-            <Domicilios domiciliosPrevios={domicilios} handleChange={() => { }} />
+            <Domicilios domicilios={domicilios} handleChange={() => { }} />
         </ModalGenerico>
 
     return (

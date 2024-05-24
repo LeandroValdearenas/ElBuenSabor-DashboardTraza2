@@ -140,7 +140,7 @@ const Insumos = () => {
             erroresNuevos['stockMaximo'] = 'Debe ingresar un stock máximo válido, que sea mayor o igual a cero.';
         } else if (articuloInsumo.stockMaximo! >= 1000000000) {
             erroresNuevos['stockMaximo'] = 'El stock máximo es demasiado grande. limítese a 9 cifras';
-        } else if (articuloInsumo.stockMaximo! < articuloInsumo.stockMinimo) {
+        } else if (articuloInsumo.stockMaximo! < articuloInsumo.stockMinimo!) {
             erroresNuevos['stockMaximo'] = 'El stock máximo no puede ser menor al stock mínimo.';
         }
         if (articuloInsumo.stockActual! < 0) {
