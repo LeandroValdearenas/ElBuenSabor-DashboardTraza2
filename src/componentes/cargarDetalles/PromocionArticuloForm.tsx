@@ -175,8 +175,8 @@ function PromocionArticuloForm({ detallesPrevios, onDetallesChange, handleCloseM
               disableRowSelectionOnClick
               processRowUpdate={handleProcessRowUpdate}
               />
-            : <p className="mt-4 d-flex">
-                Seleccione artículos para agregarlos
+          <p className="mt-4 d-flex">
+            Seleccione artículos para agregarlos
           </p>
         <div className="d-flex justify-content-end">
           <button className="btn btn-success" onClick={handleButtonClick}>Guardar</button>
