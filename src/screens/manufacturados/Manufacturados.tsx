@@ -66,11 +66,15 @@ const ArticulosManufacturados = () => {
               }
             for (const sucursal of sucursales) {
               const art: ArticuloManufacturado[] = await articuloManufacturadoService.buscarXSucursal(Number(sucursal.id));
-              const stock = new StockManufacturado();
-              stock.id = sucursal.id ;
-              stock.sucursal = sucursal;
-              stock.stockActual = art.filter(a => a.id === articulo.id).map(a => a.stockActual).reduce((acc, curr) => acc + curr, 0); // Assuming stockActual is a number
-              articulo.stocksManufacturado.push(stock);
+              if (art.length) {
+                const stock = new StockManufacturado();
+                stock.id = sucursal.id ;
+                stock.sucursal = sucursal;
+                stock.stockActual = art.filter(a => a.id === articulo.id).map(a => a.stockActual).reduce((acc, curr) => acc + curr, 0); // Assuming stockActual is a number
+                articulo.stocksManufacturado.push(stock);
+              } else {
+                continue;
+              }
             }
           }
       
